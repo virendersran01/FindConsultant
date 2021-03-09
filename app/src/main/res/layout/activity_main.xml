@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/demo_color_background"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/viewHeader"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/demo_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <View
+        android:id="@+id/viewHeader1"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/demo_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewHeader"/>
+
+    <ImageView
+        android:id="@+id/imageNavigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sort"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="@id/viewHeader"
+        app:layout_constraintTop_toTopOf="@id/viewHeader"
+        app:layout_constraintBottom_toBottomOf="@id/viewHeader"/>
+
+    <ImageView
+        android:id="@+id/imageUser"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_user_avatar"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="@id/viewHeader"
+        app:layout_constraintTop_toTopOf="@id/viewHeader"
+        app:layout_constraintBottom_toBottomOf="@id/viewHeader"/>
+
+    <View
+        android:id="@+id/viewHeaderBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="2:1"
+        android:background="@drawable/ic_header_background"
+        android:backgroundTint="@color/demo_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewHeader1"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textHeader1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Your"
+        android:layout_marginTop="16dp"
+        app:fontFamily="sans-serif-light"
+        android:textColor="#F1FDFA"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="@id/imageNavigation"
+        app:layout_constraintTop_toBottomOf="@id/viewHeader"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textHeader2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Consultant"
+        app:fontFamily="sans-serif-black"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/imageNavigation"
+        app:layout_constraintTop_toBottomOf="@id/textHeader1"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSearch"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="@id/imageNavigation"
+        app:layout_constraintEnd_toStartOf="@id/cardFilter"
+        app:layout_constraintBottom_toBottomOf="@id/viewHeaderBackground"
+        app:layout_constraintTop_toTopOf="@id/viewHeaderBackground">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="Find specific doctor"
+                android:textColorHint="#878686"
+                android:fontFamily="sans-serif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imageSearch"/>
+
+            <ImageView
+                android:id="@+id/imageSearch"
+                android:layout_width="56dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_search"
+                android:background="@color/demo_color1"
+                android:padding="12dp"
+                android:rotation="90"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFilter"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="@id/imageUser"
+        app:layout_constraintTop_toTopOf="@id/cardSearch"
+        app:layout_constraintBottom_toBottomOf="@id/cardSearch">
+
+        <ImageView
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_tune"
+            app:tint="@color/demo_color1"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="450 specialties and subspecialties"
+        app:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintStart_toStartOf="@id/cardSearch"
+        app:layout_constraintBottom_toBottomOf="@id/viewHeaderBackground"/>
+
+    <include
+        android:id="@+id/card1"
+        layout="@layout/item_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/cardSearch"
+        app:layout_constraintEnd_toEndOf="@id/cardFilter"
+        app:layout_constraintTop_toBottomOf="@id/text"/>
+
+    <include
+
+        layout="@layout/item_card"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@id/cardSearch"
+        app:layout_constraintEnd_toEndOf="@id/cardFilter"
+        app:layout_constraintTop_toBottomOf="@id/card1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_user_avatar"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:rating="5"
+            android:progressTint="#FDD835"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            app:layout_constraintTop_toTopOf="@id/image"
+            app:layout_constraintStart_toEndOf="@id/image"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Adam Harry Bloom"
+            app:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textDepartment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ophthalmology"
+            app:fontFamily="sans-serif-medium"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@id/textName"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huntington, NY"
+            app:fontFamily="sans-serif-medium"
+            android:textSize="20sp"
+            android:layout_marginTop="8dp"
+            app:drawableStartCompat="@drawable/ic_location"
+            android:drawablePadding="8dp"
+            android:drawableTint="@android:color/tab_indicator_text"
+            app:layout_constraintStart_toStartOf="@id/ratingBar"
+            app:layout_constraintTop_toBottomOf="@id/textDepartment"/>
+
+        <View
+            android:id="@+id/viewBackgroundAppointment"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@color/demo_color1"
+            android:layout_marginTop="32dp"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintTop_toBottomOf="@id/textLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Appointment"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toStartOf="@id/viewBackgroundAppointment"
+            app:layout_constraintEnd_toEndOf="@id/viewBackgroundAppointment"
+            app:layout_constraintTop_toTopOf="@id/viewBackgroundAppointment"
+            app:layout_constraintBottom_toBottomOf="@id/viewBackgroundAppointment"/>
+
+        <View
+            android:id="@+id/viewBackgroundLocation"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="#EAF1EA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/viewBackgroundAppointment"
+            app:layout_constraintEnd_toStartOf="@id/viewBackgroundAppointment"
+            app:layout_constraintBottom_toBottomOf="@id/viewBackgroundAppointment"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Find Location On Map"
+            android:textAlignment="center"
+            android:textColor="@color/demo_color1"
+            android:textSize="16sp"
+            app:fontFamily="sans-serif-black"
+            app:layout_constraintStart_toStartOf="@id/viewBackgroundLocation"
+            app:layout_constraintEnd_toEndOf="@id/viewBackgroundLocation"
+            app:layout_constraintTop_toTopOf="@id/viewBackgroundLocation"
+            app:layout_constraintBottom_toBottomOf="@id/viewBackgroundLocation"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
