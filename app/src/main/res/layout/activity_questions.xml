@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:max="6"
-                android:progress="3"
+                android:progress="1"
                 android:progressTint="@color/demo_color"
                 app:indicatorSize="52dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -83,8 +83,7 @@
                 android:id="@+id/imagePrevious"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
+                android:padding="16dp"
                 android:src="@drawable/ic_arrow_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -95,8 +94,7 @@
                 android:id="@+id/imageNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
+                android:padding="16dp"
                 android:src="@drawable/ic_arrow_forward"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -119,13 +117,13 @@
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/textQuestion1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:textAlignment="center"
+                        android:layout_marginEnd="12dp"
                         android:text="Were You Ever Told By A Physician that you had astroke"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         app:fontFamily="sans-serif-medium"
@@ -136,63 +134,66 @@
                     <RadioGroup
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
-                        android:layout_marginTop="8dp"
-                        app:layout_constraintStart_toStartOf="@id/textQuestion1"
+                        android:orientation="vertical"
                         app:layout_constraintEnd_toEndOf="@id/textQuestion1"
+                        app:layout_constraintStart_toStartOf="@id/textQuestion1"
                         app:layout_constraintTop_toBottomOf="@id/textQuestion1">
 
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corner_outline_shape"
                             android:paddingStart="8dp"
-                            android:paddingEnd="8dp"
-                            android:background="@drawable/rounded_corner_outline_shape">
+                            android:paddingEnd="8dp">
 
                             <com.google.android.material.radiobutton.MaterialRadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Yes"/>
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Yes" />
 
                         </FrameLayout>
 
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingStart="8dp"
-                            android:paddingEnd="8dp"
                             android:layout_marginTop="8dp"
-                            android:background="@drawable/rounded_corner_outline_shape">
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
 
                             <com.google.android.material.radiobutton.MaterialRadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="No"/>
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="No" />
 
                         </FrameLayout>
 
                         <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingStart="8dp"
-                            android:paddingEnd="8dp"
                             android:layout_marginTop="8dp"
-                            android:background="@drawable/rounded_corner_outline_shape">
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
 
                             <com.google.android.material.radiobutton.MaterialRadioButton
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Unknown"/>
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Unknown" />
 
                         </FrameLayout>
-
 
 
                     </RadioGroup>
-
-
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -203,13 +204,13 @@
 
                     <com.google.android.material.textview.MaterialTextView
                         android:id="@+id/textQuestion2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:textAlignment="center"
+                        android:layout_marginEnd="12dp"
                         android:text="Have You ever had sudden painless weakness on one side of your body"
+                        android:textAlignment="center"
                         android:textColor="@color/black"
                         android:textSize="22sp"
                         app:fontFamily="sans-serif-medium"
@@ -217,42 +218,331 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <com.google.android.material.chip.ChipGroup
+                    <RadioGroup
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
                         android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
                         android:layout_marginEnd="16dp"
-                        app:layout_constraintStart_toStartOf="@id/textQuestion2"
+                        android:orientation="vertical"
                         app:layout_constraintEnd_toEndOf="@id/textQuestion2"
+                        app:layout_constraintStart_toStartOf="@id/textQuestion2"
                         app:layout_constraintTop_toBottomOf="@id/textQuestion2">
 
-                        <com.google.android.material.chip.Chip
+                        <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Yes"
-                            android:paddingStart="16dp"
-                            android:paddingEnd="16dp"/>
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
 
-                        <com.google.android.material.chip.Chip
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Yes" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="No"
-                            android:paddingStart="16dp"
-                            android:paddingEnd="16dp"/>
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
 
-                        <com.google.android.material.chip.Chip
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="No" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Unknown"
-                            android:paddingStart="16dp"
-                            android:paddingEnd="16dp"/>
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Unknown" />
+
+                        </FrameLayout>
 
 
-
-                    </com.google.android.material.chip.ChipGroup>
+                    </RadioGroup>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textQuestion3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
+                    android:text="Have You ever had sudden numbness or dead feeling on side of your body"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:fontFamily="sans-serif-medium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:cardCornerRadius="6dp"
+                        app:cardBackgroundColor="@color/demo_color_background"
+                        app:layout_constraintEnd_toEndOf="@id/textQuestion3"
+                        app:layout_constraintStart_toStartOf="@id/textQuestion3"
+                        app:layout_constraintTop_toBottomOf="@id/textQuestion3">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="8"
+                            android:minLines="8"
+                            android:padding="4dp"
+                            android:background="@null"
+                            android:gravity="start"
+                            android:inputType="textMultiLine"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textQuestion4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="Have You ever had sudden painless loss of vision in one or both eyes"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:fontFamily="sans-serif-medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="@id/textQuestion4"
+                        app:layout_constraintStart_toStartOf="@id/textQuestion4"
+                        app:layout_constraintTop_toBottomOf="@id/textQuestion4">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Yes" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="No" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Unknown" />
+
+                        </FrameLayout>
+
+
+                    </RadioGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textQuestion5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="Have You suddenly lost one half of your vision"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:fontFamily="sans-serif-medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        app:hintEnabled="false"
+                        app:layout_constraintEnd_toEndOf="@id/textQuestion5"
+                        app:layout_constraintStart_toStartOf="@id/textQuestion5"
+                        app:layout_constraintTop_toBottomOf="@id/textQuestion5">
+
+                      <com.google.android.material.textfield.TextInputEditText
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:hint="Write here"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textQuestion6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:text="Have You ever suddenly lost ability to understand what people are saying"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:fontFamily="sans-serif-medium"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <RadioGroup
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="@id/textQuestion6"
+                        app:layout_constraintStart_toStartOf="@id/textQuestion6"
+                        app:layout_constraintTop_toBottomOf="@id/textQuestion6">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Yes" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="No" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/rounded_corner_outline_shape"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="8dp"
+                                android:paddingEnd="0dp"
+                                android:text="Unknown" />
+
+                        </FrameLayout>
+
+
+                    </RadioGroup>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 

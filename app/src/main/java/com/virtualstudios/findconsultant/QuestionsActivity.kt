@@ -7,6 +7,8 @@ import com.virtualstudios.findconsultant.databinding.ActivityQuestionsBinding
 class QuestionsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityQuestionsBinding
+    private val totalQuestions: Int = 6
+    private var currentQuestions: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,16 +17,22 @@ class QuestionsActivity : AppCompatActivity() {
 
         binding.imageNext.setOnClickListener {
 
-            if(binding.viewFlipper.displayedChild != binding.viewFlipper.childCount){
+            if (currentQuestions != totalQuestions) {
+                currentQuestions++
                 binding.viewFlipper.showNext()
+                binding.textProgress.text = "$currentQuestions/$totalQuestions"
+                binding.progressBar.progress = currentQuestions
+                binding.progressBar.animate()
             }
         }
 
         binding.imagePrevious.setOnClickListener {
-            binding.viewFlipper.showPrevious()
-
-            if (binding.viewFlipper.displayedChild == 0) {
+            if (currentQuestions != 1) {
+                currentQuestions--
                 binding.viewFlipper.showPrevious()
+                binding.textProgress.text = "$currentQuestions/$totalQuestions"
+                binding.progressBar.progress = currentQuestions
+                binding.progressBar.animate()
             }
         }
     }
