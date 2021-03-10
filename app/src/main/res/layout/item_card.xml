@@ -39,8 +39,8 @@
             android:text="Dr. Adam Harry Bloom"
             app:fontFamily="sans-serif-black"
             android:textColor="@color/black"
-            android:textSize="22sp"
-            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:layout_marginTop="6dp"
             app:layout_constraintStart_toStartOf="@id/ratingBar"
             app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
 
@@ -50,8 +50,8 @@
             android:layout_height="wrap_content"
             android:text="Ophthalmology"
             app:fontFamily="sans-serif-medium"
-            android:textSize="20sp"
-            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="@id/ratingBar"
             app:layout_constraintTop_toBottomOf="@id/textName"/>
 
@@ -61,8 +61,8 @@
             android:layout_height="wrap_content"
             android:text="Huntington, NY"
             app:fontFamily="sans-serif-medium"
-            android:textSize="20sp"
-            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:layout_marginTop="4dp"
             app:drawableStartCompat="@drawable/ic_location"
             android:drawablePadding="8dp"
             android:drawableTint="@android:color/tab_indicator_text"
@@ -74,7 +74,7 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:background="@color/demo_color1"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintWidth_percent="0.4"
             app:layout_constraintTop_toBottomOf="@id/textLocation"
             app:layout_constraintEnd_toEndOf="parent"
